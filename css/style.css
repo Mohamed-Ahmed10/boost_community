@@ -2,8 +2,21 @@
   color: #1DA6C5; }
 
 .border_primary {
-  border: 1px solid #1DA6C5;
-  padding: 4px 12px; }
+  border: 1px solid #1DA6C5; }
+
+.sidebar {
+  background-color: #00314b;
+  z-index: 5;
+  height: 80vh;
+  top: 55px;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: .3s all ease-in-out;
+  opacity: 0; }
+  .sidebar.show {
+    opacity: 1;
+    width: 100%; }
 
 nav {
   background-color: #00314b; }
@@ -11,6 +24,20 @@ nav {
     nav .container-fluid {
       flex-direction: column;
       gap: 10px; } }
+  nav .left #toggler {
+    width: 44px; }
+  nav .left button {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px 12px; }
+    nav .left button i {
+      transition: 1s all ease-in-out; }
+      nav .left button i.hidden_icon {
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+        width: 0; }
   nav .search_container {
     position: relative;
     width: 400px; }
@@ -21,7 +48,7 @@ nav {
       content: "";
       width: 10%;
       height: 100%;
-      background: url(../images/search.svg) no-repeat;
+      background: url(../images/icons/search.svg) no-repeat;
       color: #9CB1BB;
       position: absolute;
       top: 18%;
@@ -42,5 +69,8 @@ nav {
       gap: 8px;
       background: #012335;
       color: #1DA6C5; }
+
+body {
+  height: 5000px; }
 
 /*# sourceMappingURL=style.css.map */

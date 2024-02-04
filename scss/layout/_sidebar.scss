@@ -1,0 +1,16 @@
+.sidebar {
+    background-color: $nav_bg;
+    z-index: 5;
+    height: 80vh;
+    top: 55px;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+    opacity: 0;
+
+    &.show {
+        opacity: 1;
+        width: 100%;
+    }
+}
