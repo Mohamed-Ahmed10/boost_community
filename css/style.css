@@ -1,22 +1,25 @@
+body {
+  background: url(../images/backgrounds/background.png);
+  background-size: cover; }
+
 .boost_primary {
   color: #1DA6C5; }
 
 .border_primary {
   border: 1px solid #1DA6C5; }
 
-.sidebar {
-  background-color: #00314b;
-  z-index: 5;
-  height: 80vh;
-  top: 55px;
-  left: 0;
-  width: 0;
-  overflow: hidden;
-  transition: .3s all ease-in-out;
-  opacity: 0; }
-  .sidebar.show {
-    opacity: 1;
-    width: 100%; }
+.sidebar_container {
+  transition: .3s all ease-in-out; }
+  .sidebar_container.hide {
+    width: 0;
+    overflow: hidden; }
+  .sidebar_container.show {
+    opacity: 1; }
+  .sidebar_container .sidebar {
+    background-color: #00314b;
+    height: 80vh;
+    overflow: hidden;
+    transition: .3s all ease-in-out; }
 
 nav {
   background-color: #00314b; }
@@ -40,7 +43,7 @@ nav {
         width: 0; }
   nav .search_container {
     position: relative;
-    width: 400px; }
+    max-width: 400px; }
     nav .search_container input {
       padding-inline-start: 3rem;
       background-color: #EEF1F2; }

@@ -1,16 +1,18 @@
-.sidebar {
-    background-color: $nav_bg;
-    z-index: 5;
-    height: 80vh;
-    top: 55px;
-    left: 0;
-    width: 0;
-    overflow: hidden;
+.sidebar_container {
     transition: .3s all ease-in-out;
-    opacity: 0;
 
-    &.show {
+    &.hide {
+        width: 0;
+        overflow: hidden;
+    }
+    &.show{
         opacity: 1;
-        width: 100%;
+    }
+
+    .sidebar {
+        background-color: $nav_bg;
+        height: 80vh;
+        overflow: hidden;
+        transition: .3s all ease-in-out;
     }
 }

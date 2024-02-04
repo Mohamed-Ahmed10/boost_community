@@ -34,7 +34,7 @@ nav {
 
     .search_container {
         position: relative;
-        width: 400px;
+        max-width: 400px;
 
         input {
             padding-inline-start: 3rem;
