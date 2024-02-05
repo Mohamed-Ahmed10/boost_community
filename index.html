@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar site_nav">
-        <div class="container-fluid">
+        <div class="container">
             <div class="d-flex left align-items-center">
                 <div id="toggler" class="d-flex align-items-center">
                     <img src="./images/icons/nav_btn.svg" class="toggle_icon" alt="nav btn">
@@ -47,18 +47,65 @@
 
     <div class="row m-0">
         <!-- Add hide class to side_content   -->
-        <div id="side_content" class="col-3 p-0 sidebar_container">
+        <div id="side_nav" class="col-3 p-0 sidebar_container">
             <div class="sidebar position-relative">
                 <ul>
-                    <li>test</li>
-                    <li>test</li>
-                    <li>test</li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/home.svg" alt="icon">
+                            <span>home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/my_tasks.svg" alt="icon">
+                            <span>my tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/inbox.svg" alt="icon">
+                            <span>inbox</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="border border-secondary border-1 opacity-50">
+                <ul>
+                    <li>
+                        <div>organization</div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/reporting.svg" alt="icon">
+                            <span>reporting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/trainers.svg" alt="icon">
+                            <span>trainers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/courses.svg" alt="icon">
+                            <span>courses</span>
+                        </a>
+                    </li>
                 </ul>
                 <img src="./images/boost-logo.png" class="logo" alt="logo">
             </div>
 
         </div>
-        <div class="col-9">test</div>
+        <div class="col-9 site_content hide" id="side_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>home</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>

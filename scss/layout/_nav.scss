@@ -1,8 +1,8 @@
 nav {
     background-color: $nav_bg;
 
-    .container-fluid {
-        @media (max-width:800px) {
+    .container {
+        @media (max-width:991px) {
             flex-direction: column;
             gap: 10px;
         }

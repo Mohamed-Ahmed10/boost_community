@@ -1,0 +1,11 @@
+.site_content {
+
+    &.offset_left {
+        transition: .5s all ease-in-out;
+        margin-inline-start: 40px;
+    }
+
+    h3 {
+        text-transform: capitalize;
+    }
+}
