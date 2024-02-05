@@ -26,9 +26,14 @@ body {
   .sidebar_container .sidebar {
     background-color: #00314b;
     height: 80vh;
-    width: 70%;
+    min-width: 70%;
     overflow: hidden;
     transition: .3s all ease-in-out; }
+    .sidebar_container .sidebar .logo {
+      position: absolute;
+      bottom: 29px;
+      width: 80%;
+      left: 5%; }
 
 nav {
   background-color: #00314b; }
@@ -37,7 +42,7 @@ nav {
       flex-direction: column;
       gap: 10px; } }
   nav .left {
-    width: 12%;
+    min-width: 12%;
     justify-content: space-between; }
     nav .left #toggler {
       width: 44px;

@@ -13,8 +13,16 @@
     .sidebar {
         background-color: $nav_bg;
         height: 80vh;
-        width: 70%;
+        min-width: 70%;
         overflow: hidden;
         transition: .3s all ease-in-out;
+
+
+        .logo {
+            position: absolute;
+            bottom: 29px;
+            width: 80%;
+            left: 5%
+        }
     }
 }
