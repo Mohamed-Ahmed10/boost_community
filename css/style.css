@@ -26,6 +26,7 @@ body {
   .sidebar_container .sidebar {
     background-color: #00314b;
     height: 80vh;
+    width: 70%;
     overflow: hidden;
     transition: .3s all ease-in-out; }
 
@@ -71,17 +72,13 @@ nav {
   nav .ai_btn {
     background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%), linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
     color: #FFF;
-    padding: 10px, 16px, 10px, 16px;
     border-radius: 10px;
-    border: 2px;
-    gap: 8px;
     margin-inline-end: 10px; }
   nav .dropdown {
     gap: 10px; }
     nav .dropdown button {
       padding: 0px 5px 0px 5px;
       border-radius: 34px;
-      gap: 8px;
       background: #012335;
       color: #1DA6C5; }
 

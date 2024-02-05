@@ -34,9 +34,6 @@ nav {
             gap: 3px;
             padding: 4px 12px;
         }
-
-
-
     }
 
     .search_container {
@@ -64,10 +61,7 @@ nav {
         background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%),
             linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
         color: #FFF;
-        padding: 10px, 16px, 10px, 16px;
         border-radius: 10px;
-        border: 2px;
-        gap: 8px;
         margin-inline-end: 10px;
     }
 
@@ -77,9 +71,8 @@ nav {
         button {
             padding: 0px 5px 0px 5px;
             border-radius: 34px;
-            gap: 8px;
             background: #012335;
-            color: $primary_color
+            color: $primary_color;
         }
     }
 }
