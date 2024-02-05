@@ -8,6 +8,14 @@ body {
 .border_primary {
   border: 1px solid #1DA6C5; }
 
+.icon {
+  width: 24px;
+  height: 24px; }
+
+.toggle_icon {
+  width: 34px;
+  height: 34px; }
+
 .sidebar_container {
   transition: .3s all ease-in-out; }
   .sidebar_container.hide {
@@ -27,35 +35,39 @@ nav {
     nav .container-fluid {
       flex-direction: column;
       gap: 10px; } }
-  nav .left #toggler {
-    width: 44px; }
-  nav .left button {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding: 4px 12px; }
-    nav .left button i {
-      transition: 1s all ease-in-out; }
-      nav .left button i.hidden_icon {
+  nav .left {
+    width: 12%;
+    justify-content: space-between; }
+    nav .left #toggler {
+      width: 44px;
+      cursor: pointer; }
+      nav .left #toggler img {
+        transition: .3s all ease-in-out; }
+      nav .left #toggler .hidden_icon {
         opacity: 0;
         overflow: hidden;
         height: 0;
         width: 0; }
+    nav .left button {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px 12px; }
   nav .search_container {
     position: relative;
-    max-width: 400px; }
+    width: 400px; }
     nav .search_container input {
       padding-inline-start: 3rem;
       background-color: #EEF1F2; }
     nav .search_container::after {
       content: "";
-      width: 10%;
-      height: 100%;
+      width: 24px;
+      height: 24px;
       background: url(../images/icons/search.svg) no-repeat;
       color: #9CB1BB;
       position: absolute;
-      top: 18%;
-      left: 4%; }
+      top: 17%;
+      left: 3%; }
   nav .ai_btn {
     background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%), linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
     color: #FFF;

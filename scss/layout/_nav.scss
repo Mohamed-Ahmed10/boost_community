@@ -9,8 +9,23 @@ nav {
     }
 
     .left {
+        width: 12%;
+        justify-content: space-between;
+
         #toggler {
             width: 44px;
+            cursor: pointer;
+
+            img {
+                transition: .3s all ease-in-out;
+            }
+
+            .hidden_icon {
+                opacity: 0;
+                overflow: hidden;
+                height: 0;
+                width: 0;
+            }
         }
 
         button {
@@ -18,23 +33,15 @@ nav {
             align-items: center;
             gap: 3px;
             padding: 4px 12px;
-
-            i {
-                transition: 1s all ease-in-out;
-
-                &.hidden_icon {
-                    opacity: 0;
-                    overflow: hidden;
-                    height: 0;
-                    width: 0;
-                }
-            }
         }
+
+
+
     }
 
     .search_container {
         position: relative;
-        max-width: 400px;
+        width: 400px;
 
         input {
             padding-inline-start: 3rem;
@@ -43,13 +50,13 @@ nav {
 
         &::after {
             content: "";
-            width: 10%;
-            height: 100%;
+            width: 24px;
+            height: 24px;
             background: url(../images/icons/search.svg) no-repeat;
             color: $gray_color;
             position: absolute;
-            top: 18%;
-            left: 4%;
+            top: 17%;
+            left: 3%;
         }
     }
 

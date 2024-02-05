@@ -2,25 +2,11 @@ var toggler = document.getElementById('toggler'),
     sideContent = document.getElementById("side_content");
 
 toggler.addEventListener('click', function () {
-    if (this.children[1].classList.contains('hidden_icon')) {
-        this.children[1].classList.remove('hidden_icon')
-        this.children[0].classList.add('hidden_icon')
-        // this.children[1].style.display = 'initial'
-        // setTimeout(() => {
-        //     this.children[0].style.display = 'none'
-        // }, 800)
-    }
-    else {
-        this.children[0].classList.remove('hidden_icon')
-        this.children[1].classList.add('hidden_icon')
 
-        // this.children[0].style.display = 'initial'
-        // setTimeout(() => {
-        //     this.children[1].style.display = 'none';
-        // }, 800)
-    }
-    sideContent.classList.toggle('hide')
+    [...toggler.children].forEach(sib => sib.classList.toggle('hidden_icon'))
+
     sideContent.classList.toggle('show')
+    sideContent.classList.toggle('hide')
 })
 
 function hiddenHandler(index) {
