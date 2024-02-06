@@ -60,9 +60,10 @@ nav {
     .ai_btn {
         background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%),
             linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
-        color: #FFF;
+        color: $white_black;
         border-radius: 10px;
         margin-inline-end: 10px;
+        border: 2px solid #05C9FF
     }
 
     .dropdown {

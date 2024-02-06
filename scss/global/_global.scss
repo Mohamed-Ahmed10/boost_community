@@ -1,15 +1,13 @@
+:root {
+    @media (max-width:600px) {
+        font-size: 12px;
+    }
+}
+
 body {
     background: url(../images/backgrounds/background.png);
     background-size: cover;
     // Don't edit
-}
-
-.boost_primary {
-    color: $primary_color
-}
-
-.border_primary {
-    border: 1px solid $primary_color;
 }
 
 .icon {
@@ -24,4 +22,20 @@ body {
 
 li {
     list-style: none;
+}
+
+.loading_container {
+    position: absolute;
+    inset: 0;
+    background: $nav_bg;
+    z-index: 3;
+    @include default_transition;
+
+    &.hide {
+        opacity: 0;
+    }
+}
+
+.dropdown-menu {
+    @include fast_transition
 }
