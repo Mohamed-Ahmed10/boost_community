@@ -28,6 +28,16 @@
         ul {
             li {
                 color: $white_black;
+                margin-bottom: 10px;
+
+                padding: 5px 12px;
+
+                &:hover:not(.title),
+                &.active:not(.title) {
+                    background: linear-gradient(270deg, #1DA6C5 0%, #8ED6EE);
+                    width: 90%;
+                    border-radius: 10px;
+                }
 
                 a {
                     text-decoration: none;
@@ -35,7 +45,6 @@
                     align-items: center;
                     color: inherit;
                     gap: 10px;
-                    margin: 1rem 0;
                     font-size: .9rem;
                 }
 

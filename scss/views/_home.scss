@@ -89,7 +89,7 @@
     .tasks {
         background: #FFF;
         box-shadow: 0px 10px 20px 0px #00000020;
-
+        color: #718088;
 
         .left {
             img {
@@ -99,7 +99,7 @@
             }
         }
 
-        .finished_tasks_counter {
+        .total_finished_counter {
             text-align: center;
             padding: 1px;
             color: $white_black;
@@ -112,29 +112,49 @@
             border: 2px solid #05C9FF
         }
 
-        .tab-content {
-            font-size: .8rem;
+        .finished_tasks_counter {
+            @extend .total_finished_counter;
+            height: 23px;
+            width: 66px;
+            font-size: .7rem;
 
-            .task_input {
-                border: none;
-                border-bottom: 1px solid #E6EEF2;
-                border-radius: initial;
-                padding-inline-start: 22px;
-                position: relative;
+            &~* {
+                font-size: .7rem;
+            }
+        }
 
-                &:focus {
-                    box-shadow: none
+        .tasks_tabs {
+            border-bottom: 0 !important;
+
+
+
+
+
+            .input_container {
+                img {
+                    transform: translate(80%, -50%)
                 }
 
-                &::before {
-                    content: "ddd";
-                    background-image: url(../images/icons/home/plus.svg);
-                    height: 20px;
-                    width: 20px;
-                    display: inline-block;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
+                .task_input {
+                    border: none;
+                    border-bottom: 1px solid #E6EEF2;
+                    border-radius: initial;
+                    padding-inline-start: 30px;
+                    font-size: .8rem;
+
+                    &:focus {
+                        box-shadow: none
+                    }
+                }
+            }
+
+            .tasks_list {
+                font-size: .8rem;
+
+                &>li {
+                    font-size: .8rem !important;
+                    padding-left: 0;
+                    color: $white_black_darker
                 }
             }
         }

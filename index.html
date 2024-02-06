@@ -52,10 +52,10 @@
 
     <div class="row m-0">
         <!-- Add hide class to side_content   -->
-        <div id="side_nav" class="col-3 p-0 sidebar_container hide">
+        <div id="side_nav" class="col-2 p-0 sidebar_container hide">
             <div class="sidebar position-relative">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <img class="icon" src="./images/icons/sidebar/home.svg" alt="icon">
                             <span>home</span>
@@ -76,7 +76,7 @@
                 </ul>
                 <hr class="border border-secondary border-1 opacity-50">
                 <ul>
-                    <li>
+                    <li class="title">
                         <div>organization</div>
                     </li>
                     <li>
@@ -162,7 +162,7 @@
                             <h6>My tasks</h6>
                         </div>
                         <div
-                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                            class="total_finished_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
                             <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
                             <span>14/18</span>
                         </div>
@@ -184,17 +184,90 @@
                                 aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
                         </li>
                     </ul>
-                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-content tasks_tabs" id="myTabContent">
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                             aria-labelledby="home-tab" tabindex="0">
-
-                            <input type="text" class="form-control task_input" >
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A fourth item</li>
-                                <li class="list-group-item">And a fifth one</li>
+                            <div class="position-relative input_container">
+                                <img src="./images/icons/home/plus.svg" class="position-absolute top-50 start-0 z-1"
+                                    alt="Plus">
+                                <input type="text" class="form-control task_input" placeholder="Enter task">
+                            </div>
+                            <ul class="list-group list-group-flush tasks_list">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div>
+                                        <img src="./images/icons/home/check_mark.svg" class="icon" alt="icon">
+                                        An item
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <span class="badge bg-secondary mx-2">New</span>
+                                        <span>15 Feb</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div>
+                                        <img src="./images/icons/home/check_mark.svg" class="icon" alt="icon">
+                                        A second item
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <span class="badge bg-secondary mx-2">New</span>
+                                        <span>15 Feb</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div>
+                                        <img src="./images/icons/home/check_mark.svg" class="icon" alt="icon">
+                                        A third item
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <span class="badge bg-secondary mx-2">New</span>
+                                        <span>15 Feb</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div>
+                                        <img src="./images/icons/home/check_mark.svg" class="icon" alt="icon">
+                                        A fourth item
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <span class="badge bg-secondary mx-2">New</span>
+                                        <span>15 Feb</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div>
+                                        <img src="./images/icons/home/check_mark.svg" class="icon" alt="icon">
+                                        And a fifth one
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="finished_tasks_counter rounded-pill bg-secondary d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <span class="badge bg-secondary mx-2">New</span>
+                                        <span>15 Feb</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
