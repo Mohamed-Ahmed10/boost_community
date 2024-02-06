@@ -20,4 +20,5 @@ function hiddenHandler(index) {
 var loadingContainer = document.getElementById('loading_container')
 window.onload = function () {
     loadingContainer.classList.add('hide')
+    document.body.classList.add("loaded")
 }
