@@ -12,17 +12,15 @@
 
     .sidebar {
         background-color: $nav_bg;
-        height: 80vh;
+        min-height: 80vh;
         min-width: 70%;
         overflow: hidden;
         transition: .3s all ease-in-out;
 
 
         .logo {
-            position: absolute;
-            bottom: 29px;
-            width: 80%;
-            left: 5%
+            margin: 20%;
+            width: 50%;
         }
 
         ul {

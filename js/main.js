@@ -8,8 +8,6 @@ var toggler = document.getElementById('toggler'),
         [...toggler.children].forEach(sib => sib.classList.toggle('hidden_icon'))
 
 
-
-        sideNav.classList.toggle('show')
         sideNav.classList.toggle('hide')
         sideContent.classList.toggle('offset_left')
     })
