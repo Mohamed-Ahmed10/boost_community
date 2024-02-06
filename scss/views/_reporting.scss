@@ -1,0 +1,33 @@
+.reporting_content {
+    .card {
+        font-size: .8rem;
+
+        .desc {
+            color: $white_black_darker;
+
+            .min_target {
+                color: $danger
+            }
+        }
+
+        .financial_progress {
+            &::before {
+                content: attr(data_number);
+                position: absolute;
+                top: -20px;
+                left: 10px;
+                font-weight: bold;
+            }
+
+            .target {
+                content: "";
+                height: 100%;
+                width: 2px;
+                position: absolute;
+                top: 0;
+                background-color: $danger;
+            }
+        }
+
+    }
+}
