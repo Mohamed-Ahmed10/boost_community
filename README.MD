@@ -3,7 +3,7 @@
 3- Libraries are used are <br /><br />
 [ [a Bootstrap](https://getbootstrap.com)
 , [a echarts apache](https://echarts.apache.org/en/index.html)
-].
+].<br /><br />
 4- You can see source code with [SASS](https://sass-lang.com) in scss file and compiled to css in css folder.<br /><br />
 5- I used SCSS extension NOT SASS in SASS language because it's more powerful than SASS.<br /><br />
 6- All custom logic located at js/main.js.<br /><br />
