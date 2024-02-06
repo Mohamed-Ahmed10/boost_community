@@ -1,5 +1,6 @@
 .sidebar_container {
-    transition: .3s all ease-in-out;
+    @include default_transition;
+
 
     &.hide {
         width: 0;
@@ -15,7 +16,8 @@
         min-height: 80vh;
         min-width: 70%;
         overflow: hidden;
-        transition: .3s all ease-in-out;
+        @include default_transition;
+
 
 
         .logo {

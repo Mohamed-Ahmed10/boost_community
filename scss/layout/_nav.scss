@@ -17,7 +17,7 @@ nav {
             cursor: pointer;
 
             img {
-                transition: .3s all ease-in-out;
+                @include default_transition;
             }
 
             .hidden_icon {
