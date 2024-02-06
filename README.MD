@@ -1,14 +1,14 @@
-1- All classes in snake_case convention so any other class with kebab-case is belongs to Bootstrap library.
-2- CSS Styles is compressed in css/style.min.css.
-3- Libraries are used are 
+1- All classes in snake_case convention so any other class with kebab-case is belongs to Bootstrap library <br />
+2- CSS Styles is compressed in css/style.min.css.<br />
+3- Libraries are used are <br />
 [ [a Bootstrap](https://getbootstrap.com)
 , [a echarts apache](https://echarts.apache.org/en/index.html)
 ].
-4- You can see source code with [SASS](https://sass-lang.com) in scss file and compiled to css in css folder.
-5- I used SCSS extension NOT SASS in SASS language because it's more powerful than SASS.
-6- All custom logic located at js/main.js.
-7- All selectors in camelCase convention.
-8- All icons imported as SVG file and all images imported as PNG files.
-9- All images or icons which contains of multiple words is written by snake_case convention.
-10- Take care I don't add any SEO tags cause it's not necessary for this project.
-11- in all pages you will get comment start with (TODO) take care of item will help you  understand what should be done.
+4- You can see source code with [SASS](https://sass-lang.com) in scss file and compiled to css in css folder.<br />
+5- I used SCSS extension NOT SASS in SASS language because it's more powerful than SASS.<br />
+6- All custom logic located at js/main.js.<br />
+7- All selectors in camelCase convention.<br />
+8- All icons imported as SVG file and all images imported as PNG files.<br />
+9- All images or icons which contains of multiple words is written by snake_case convention.<br />
+10- Take care I don't add any SEO tags cause it's not necessary for this project.<br />
+11- in all pages you will get comment start with (TODO) take care of item will help you  understand what should be done.<br />
