@@ -9,7 +9,11 @@
 @import "./layout/nav";
 
 // Components
-@import "./components/site_content";
+// @import "./components/home_content";
+
+
+// Views
+@import "./views/home";
 
 body {
     height: 5000px;

@@ -1,0 +1,77 @@
+.site_content {
+
+    &.offset_left {
+        @include default_transition;
+        margin-inline-start: 14%;
+    }
+
+    h3 {
+        text-transform: capitalize;
+    }
+
+    .employee_badge {
+        height: 146px;
+        width: 126px;
+        text-align: center;
+        border: 1px solid $white_black;
+        border-radius: 10px;
+        font-size: .9rem;
+        color: $white_black;
+        @include fast_transition;
+
+        &.creative_badge {
+            background-color: $creative_badge;
+        }
+
+        &.achieve_badge {
+            background-color: $achieve_badge;
+        }
+
+        &.employee_of_month_badge {
+            background-color: $employee_of_month_badge;
+        }
+
+        &.creative_badge2 {
+            background-color: $creative_badge2;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        div {
+            margin: 20px 0;
+        }
+    }
+
+    .calculations {
+        border: 1px solid $white_black;
+        margin: 20px auto;
+        box-shadow: 0px 10px 20px 0px #00000021;
+        padding: 10px !important;
+
+        li {
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            &,
+            button {
+                font-size: 1rem;
+                font-weight: 500;
+
+            }
+
+            button img {
+                width: 10px;
+            }
+
+            gap:3px;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

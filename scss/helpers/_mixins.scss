@@ -1,3 +1,8 @@
 @mixin default_transition() {
     transition: .8s all ease-in-out;
 }
+
+
+@mixin fast_transition() {
+    transition: .2s all ease-in-out;
+}
