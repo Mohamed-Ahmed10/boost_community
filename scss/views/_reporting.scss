@@ -11,8 +11,9 @@
         }
 
         .financial_progress {
+
             &::before {
-                content: attr(data_number);
+                content: attr(data_price)' $';
                 position: absolute;
                 top: -20px;
                 left: 10px;
@@ -27,7 +28,20 @@
                 top: 0;
                 background-color: $danger;
             }
-        }
 
+            .progress-bar {
+                animation: 4s increase_width;
+            }
+        }
+    }
+
+    .rate {
+        color: $green;
+    }
+}
+
+@keyframes increase_width {
+    from {
+        width: 0
     }
 }

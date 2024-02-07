@@ -99,3 +99,15 @@ li {
 .dropdown-menu {
     @include fast_transition
 }
+
+.percentage:after {
+    content: ' %'
+}
+
+.price::before {
+    content: "$ "
+}
+
+.light {
+    color: $white_black_darker
+}
