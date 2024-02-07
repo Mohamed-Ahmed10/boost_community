@@ -111,3 +111,14 @@ li {
 .light {
     color: $white_black_darker
 }
+
+
+@media (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 1300px;
+    }
+}

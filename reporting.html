@@ -48,7 +48,7 @@
         <div id="side_nav" class="col-2 p-0 sidebar_container hide">
             <div class="sidebar position-relative">
                 <ul>
-                    <li class="active">
+                    <li>
                         <a href="index.html">
                             <img class="icon" src="./images/icons/sidebar/home.svg" alt="icon">
                             <span>home</span>
@@ -72,7 +72,7 @@
                     <li class="title">
                         <div>organization</div>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="reporting.html">
                             <img class="icon" src="./images/icons/sidebar/reporting.svg" alt="icon">
                             <span>reporting</span>
@@ -97,8 +97,8 @@
         <div class="col-9 reporting_content offset_left" id="side_content">
             <div class="container">
                 <h3 class="text-capitalize">reporting</h3>
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-4">
+                    <div class="col-md-4 col-12">
                         <div class="card h-100 flex-row p-2 justify-content-between flex-wrap">
                             <h6>Financial Progress</h6>
                             <div class="desc">
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4 col-12">
                         <div class="card h-100 flex-row p-2 justify-content-between flex-wrap">
                             <h6>Task Progress</h6>
                             <div class="desc">
@@ -139,11 +139,11 @@
                                 <div class="barOverflow">
                                     <div class="bar"></div>
                                 </div>
-                                <span>90</span>%
+                                <span class="percentage pe-xl-4">50</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4 col-12">
                         <div class="card h-100 p-2">
                             <div class="d-flex justify-content-between">
                                 <h6>Teams productivity</h6>
@@ -158,7 +158,7 @@
                                     </div>
                                     <h3>55%</h3>
                                 </div>
-                                <div class="w-50 d-flex justify-content-center">
+                                <div class="w-50 d-flex justify-content-center align-items-end">
                                     <!-- TODO : You will put the data by changing css variables 
                                     --tube-percentage: 55%; Number
                                     --tube-title: "55%"; String
