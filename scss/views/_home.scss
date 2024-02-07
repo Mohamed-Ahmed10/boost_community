@@ -1,10 +1,5 @@
 .site_content {
 
-    &.offset_left {
-        @include default_transition;
-        margin-inline-start: 14%;
-    }
-
     h3 {
         text-transform: capitalize;
     }

@@ -1,6 +1,17 @@
 .sidebar_container {
     @include default_transition;
 
+    &+.col-9 {
+
+        @include default_transition;
+
+        &.offset_left {
+            @include default_transition;
+            width: 100% !important;
+            padding-inline-start: 10%;
+            padding-inline-end: 10%;
+        }
+    }
 
     &.hide {
         width: 0;
