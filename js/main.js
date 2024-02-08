@@ -18,3 +18,4 @@ function hiddenHandler(index) {
 
 ///////////////////////////////////////////
 var loadingContainer = document.getElementById('loading_container')
+

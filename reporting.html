@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -129,7 +131,6 @@
                     <div class="col-md-4 col-12">
                         <div class="card h-100 p-2">
                             <div class="row">
-
                                 <div class="col-6">
                                     <h6>Task Progress</h6>
                                 </div>
@@ -141,7 +142,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12"  style="display: flex;height: 140px;align-items: center;">
+                                <div class="col-12" style="display: flex;height: 140px;align-items: center;">
                                     <div class="progress_bar">
                                         <div class="barOverflow">
                                             <div class="bar"></div>
@@ -198,14 +199,111 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 col-12">
+                        <div class="card h-100 p-2">
+                            <div class="d-flex justify-content-between">
+                                <h6>Progress</h6>
+                                <span class="light">For all branched</span>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-9">
+                                    <canvas id="progressChart" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Can make it with JS -->
+                                    <div class="mb-3">
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #58508D;"></div>
+                                            <div class="calc_title">Completed</div>
+                                        </div>
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #00314B;
+                                            ;"></div>
+                                            <div class="calc_title">Not completed</div>
+                                        </div>
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #BC5090;"></div>
+                                            <div class="calc_title">In progress</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center ">
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card h-100 p-2">
+                            <div class="d-flex justify-content-between">
+                                <h6>Progress</h6>
+                                <span class="light">For all branched</span>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-9">
+                                    <canvas id="WorkloadDisruptionChart" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Can make it with JS -->
+                                    <div class="mb-3">
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #58508D;"></div>
+                                            <div class="calc_title">Abudabi</div>
+                                        </div>
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #00314B;
+                                            ;"></div>
+                                            <div class="calc_title">Dubai</div>
+                                        </div>
+                                        <div class="calc d-flex my-1 justify-content-between align-items-center">
+                                            <div class="calc_badge rounded " style="background: #BC5090;"></div>
+                                            <div class="calc_title">Egypt</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center ">
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                        <div
+                                            class="default_counter my-1 rounded-pill d-flex align-items-center justify-content-center">
+                                            <img class="icon m-1" src="./images/icons/fox.svg" alt="icon">
+                                            <span>14/18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="module" src="./js/progress.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script type="module" src="./js/charts.js"></script>
 
 </body>
 

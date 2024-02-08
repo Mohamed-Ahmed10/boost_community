@@ -2,7 +2,6 @@
 2- CSS Styles is compressed in css/style.min.css.<br /><br />
 3- Libraries are used are <br /><br />
 [ [a Bootstrap](https://getbootstrap.com)
-, [a echarts apache](https://echarts.apache.org/en/index.html)
 ].<br /><br />
 4- You can see source code with [SASS](https://sass-lang.com) in scss file and compiled to css in css folder.<br /><br />
 5- I used SCSS extension NOT SASS in SASS language because it's more powerful than SASS.<br /><br />
@@ -15,3 +14,4 @@
 12- You can add any price WITHOUT ( $ ) and any percentage WITHOUT ( % ) because i add this in CSS file
 13- You can change active tab in sidebar by class :<u> active </u>
 14- I changed the icon of the navbar by hide one and display other with class <u>hidden_icon</u>
+15- All charts code and data located in ./js/charts.js

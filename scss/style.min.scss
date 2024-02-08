@@ -16,3 +16,9 @@
 // Views
 @import "./views/home";
 @import "./views/reporting";
+
+#chart-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}

@@ -7,9 +7,11 @@
 body {
     background: url(../images/backgrounds/background.png);
     background-size: cover;
-    // Don't edit
-    height: 100vh;
-    overflow: hidden;
+
+    // Mohamed Edit
+    // height: 100vh;
+    // overflow: hidden;
+    height: 5000px;
 
     &.loaded {
         height: initial;
@@ -120,5 +122,30 @@ li {
     .container-md,
     .container-sm {
         max-width: 1300px;
+    }
+}
+
+
+.total_finished_counter {
+    text-align: center;
+    padding: 1px;
+    color: $white_black;
+    line-height: 37px;
+    background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%),
+        linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
+    font-size: .8rem;
+    height: 30px;
+    width: 80px;
+    border: 2px solid #05C9FF
+}
+
+.default_counter {
+    @extend .total_finished_counter;
+    height: 23px;
+    width: 66px;
+    font-size: .7rem;
+
+    &~* {
+        font-size: .7rem;
     }
 }

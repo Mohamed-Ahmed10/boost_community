@@ -99,36 +99,8 @@
             }
         }
 
-        .total_finished_counter {
-            text-align: center;
-            padding: 1px;
-            color: $white_black;
-            line-height: 37px;
-            background: linear-gradient(288deg, #00C8FF 0%, #145266 104.41%),
-                linear-gradient(263.69deg, #05C9FF -34.42%, #0A3A4A 114.54%);
-            font-size: .8rem;
-            height: 30px;
-            width: 80px;
-            border: 2px solid #05C9FF
-        }
-
-        .finished_tasks_counter {
-            @extend .total_finished_counter;
-            height: 23px;
-            width: 66px;
-            font-size: .7rem;
-
-            &~* {
-                font-size: .7rem;
-            }
-        }
-
         .tasks_tabs {
             border-bottom: 0 !important;
-
-
-
-
 
             .input_container {
                 img {
