@@ -69,3 +69,41 @@ $(".progress_bar").each(function () {
         }
     });
 }
+/****************************** Sales Chart ********************************/
+
+
+var ctx = document.getElementById("myChart").getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["January", "February", "March", "April"],
+        datasets: [{
+            label: 'Series 1', // Name the series
+            data: [5, 87, 120, 66], // Specify the data values array
+            fill: true,
+            borderColor: '#2196f3', // Add custom color border (Line)
+            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        },
+        {
+            label: 'Series 2', // Name the series
+            data: [12, 54, 35, 77], // Specify the data values array
+            fill: true,
+            borderColor: '#4CAF50', // Add custom color border (Line)
+            backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        }, {
+            label: 'Series 2', // Name the series
+            data: [55, 84, 34, 14], // Specify the data values array
+            fill: true,
+            borderColor: '#F00', // Add custom color border (Line)
+            backgroundColor: '#F00', // Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        }]
+    },
+    options: {
+        responsive: true, // Instruct chart js to respond nicely.
+        maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+    }
+});

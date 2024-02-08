@@ -15,3 +15,4 @@
 13- You can change active tab in sidebar by class :<u> active </u>
 14- I changed the icon of the navbar by hide one and display other with class <u>hidden_icon</u>
 15- All charts code and data located in ./js/charts.js
+16- Any sentence with word can => This can be better if do it with JS in the future
