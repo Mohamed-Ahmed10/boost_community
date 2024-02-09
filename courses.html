@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar site_nav">
+        <div class="container">
+            <div class="d-flex left align-items-center">
+                <div id="toggler" class="d-flex align-items-center">
+                    <img src="./images/icons/nav_btn.svg" class="toggle_icon" alt="nav btn">
+                    <img src="./images/icons/close_btn.svg" class="toggle_icon hidden_icon" alt="plus icon">
+                </div>
+                <button type="button" class="btn btn-info text-white">
+                    <img src="./images/icons/plus.svg" class="icon" alt="plus icon">
+                    <span>Create</span>
+                </button>
+            </div>
+            <div class="search_container">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="btn ai_btn">
+                    <img src="./images/icons/fox.svg" class="icon" alt="Ai icon">
+                    <span>AI Wizard</span>
+                </div>
+                <div class="dropdown d-flex">
+                    <button class="border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/person.png" class="rounded-circle" alt="user">
+                        <img src="./images/icons/arrow_down_light.svg" class="icon" alt="icon">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row m-0">
+        <div id="side_nav" class="col-2 p-0 sidebar_container hide">
+            <div class="sidebar position-relative">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img class="icon" src="./images/icons/sidebar/home.svg" alt="icon">
+                            <span>home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/my_tasks.svg" alt="icon">
+                            <span>my tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/inbox.svg" alt="icon">
+                            <span>inbox</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="border border-secondary border-1 opacity-50">
+                <ul>
+                    <li class="title">
+                        <div>organization</div>
+                    </li>
+                    <li>
+                        <a href="reporting.html">
+                            <img class="icon" src="./images/icons/sidebar/reporting.svg" alt="icon">
+                            <span>reporting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./trainers.html">
+                            <img class="icon" src="./images/icons/sidebar/trainers.svg" alt="icon">
+                            <span>trainers</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="courses.html">
+                            <img class="icon" src="./images/icons/sidebar/courses.svg" alt="icon">
+                            <span>courses</span>
+                        </a>
+                    </li>
+                </ul>
+                <img src="./images/boost-logo.png" class="logo" alt="logo">
+            </div>
+        </div>
+        <div class="col-9 courses_content mt-4 offset_left" id="side_content">
+            <h3 class="text-capitalize my-1">courses</h3>
+            <div class="courses_container shadow p-3 mb-5 bg-body-tertiary rounded">
+                <div class="nav justify-content-between" id="nav-tab" role="tablist">
+                    <div class="d-flex align-items-center">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">All <span class="badge bg-secondary fw-normal">199</span></button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Public <span
+                                class="badge bg-secondary fw-normal">209</span></button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Draft <span
+                                class="badge bg-secondary fw-normal">10</span></button>
+                        <img src="./images/icons/search.svg" class="icon" alt="icon">
+                    </div>
+                    <div class="right d-flex">
+                        <div class="d-flex listing">
+                            <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+                                <img src="./images/icons/table/list.svg" class="icon" alt="icon">
+                            </button>
+                            <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+                                <img src="./images/icons/table/grid.svg" class="icon" alt="icon">
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">
+                            <img src="./images/icons/table/sort.svg" class="icon" alt="icon">
+                        </button>
+                        <button type="button" class="btn btn-outline-dark">
+                            <img src="./images/icons/table/filter.svg" class="icon" alt="icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                        tabindex="0">
+                        <div class="table_container mt-4 table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Sr</th>
+                                        <th scope="col">Instructor</th>
+                                        <th scope="col">Sector</th>
+                                        <th scope="col">Course</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">$/h</th>
+                                        <th scope="col">Rating</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">01</th>
+                                        <td class="instructor_name">
+                                            <img src="./images/instructor.jpg" alt="">
+                                            Mark
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>Mechanical Engineering</td>
+                                        <td>0123456789</td>
+                                        <td>KSA</td>
+                                        <td class="price">50</td>
+                                        <td>mdo</td>
+                                        <td>
+                                            <img title="Under development" src="./images/icons/dots.svg" alt="icon">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                        tabindex="0">...</div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                        tabindex="0">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -97,8 +97,8 @@ var myChart = new Chart(ctx, {
             label: 'Series 2', // Name the series
             data: [55, 84, 34, 14], // Specify the data values array
             fill: true,
-            borderColor: '#F00', // Add custom color border (Line)
-            backgroundColor: '#F00', // Add custom color background (Points and Fill)
+            borderColor: '#888', // Add custom color border (Line)
+            backgroundColor: '#888', // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }]
     },

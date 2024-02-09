@@ -1,0 +1,72 @@
+.courses_content {
+    .courses_container {
+        border: 1px solid $gray_color;
+        box-shadow: 2px 2px solid #ccc;
+        border-radius: 5px;
+
+        .right {
+            gap: 5px;
+
+            button {
+                border: 2px solid #71808880
+            }
+
+            .listing {
+                background-color: $gray_color;
+                padding: 4px;
+                border-radius: .375rem;
+
+                > :first-child {
+                    background-color: $nav_bg
+                }
+
+                >.btn {
+                    border: none;
+                    padding: 6px;
+                }
+            }
+
+            >.d-flex {
+                gap: 5px;
+            }
+        }
+
+        .list {
+            margin: 5px;
+            background-color: $nav_bg;
+        }
+
+        .table_container {
+            border: 3px solid #EEE;
+            border-radius: 10px !important;
+
+            .table>:not(caption)>*>* {
+                font-size: .75rem;
+                font-weight: normal;
+                font-weight: 400;
+
+                &:not(.instructor_name) {
+                    color: $white_black_darker;
+                }
+            }
+
+            .instructor_name img {
+                width: 40px;
+
+                @media (max-width:600px) {
+                    width: 20px;
+                }
+            }
+        }
+
+        .nav-link {
+            .badge {
+                border-radius: 3px !important;
+            }
+
+            &.active {
+                border-bottom: 2px solid #00314B;
+            }
+        }
+    }
+}
