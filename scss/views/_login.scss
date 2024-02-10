@@ -1,0 +1,49 @@
+body.login {
+    background-image: linear-gradient(#83C3FF80, #83C3FF80), url(../images/backgrounds/login_bg.png);
+    background-size: cover;
+    font-size: .8rem;
+
+    .login_container {
+        background-color: #EEF1F2;
+        margin: 60px 40px;
+
+        .form_content {
+            margin-inline-start: 60px;
+
+            .form-control {
+                &::placeholder {
+                    display: block;
+                }
+
+                &:focus {
+                    color: var(--bs-body-color);
+                    background-color: var(--bs-body-bg);
+                    border-color: #86b7fe;
+                    outline: 0;
+
+                }
+
+
+                // &~label {
+                //     color: rgba(var(--bs-body-color-rgb), .65);
+                //     transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+                // }
+            }
+        }
+
+        .left {
+            padding: 3.5rem;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 40px;
+        }
+
+        .sign_in {
+            background-color: $nav_bg;
+            color: #FFF;
+            font-size: .8rem;
+        }
+    }
+}
