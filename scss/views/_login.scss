@@ -33,11 +33,14 @@ body.login {
 
         .left {
             padding: 3.5rem;
+            margin-top: 100px;
         }
 
         .logo {
             width: 200px;
-            margin-bottom: 40px;
+            position: absolute;
+            top: 40px;
+            left: 70px;
         }
 
         .sign_in {
