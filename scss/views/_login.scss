@@ -15,34 +15,41 @@
             .form-control {
                 background-color: transparent;
 
+                &:focus {
+                    @extend .form-control
+                }
+
                 &::placeholder {
                     display: block;
                 }
 
                 &:focus {
                     color: var(--bs-body-color);
-                    background-color: var(--bs-body-bg);
+                    background-color: transparent;
                     border-color: #86b7fe;
                     outline: 0;
+
+                    &~label::after {
+                        background-color: transparent
+                    }
                 }
             }
         }
 
         .left {
             padding: 3rem;
-            margin-top: 80px;
 
             p {
                 color: $white_black_darker
             }
         }
 
-        .logo {
-            width: 100px;
-            position: absolute;
-            top: 24px;
-            left: 45px;
-        }
+        // .logo {
+        //     width: 100px;
+        //     position: absolute;
+        //     top: 24px;
+        //     left: 45px;
+        // }
 
         button {
 
