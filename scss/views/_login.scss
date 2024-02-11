@@ -13,6 +13,8 @@
             margin-inline-start: 60px;
 
             .form-control {
+                background-color: transparent;
+
                 &::placeholder {
                     display: block;
                 }
