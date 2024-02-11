@@ -1,5 +1,6 @@
 .login,
-.sign_up {
+.sign_up,
+.otp {
     min-height: 100vh;
     background-image: linear-gradient(#83C3FF80, #83C3FF80), url(../images/backgrounds/login_bg.png);
     background-size: cover;
@@ -83,5 +84,27 @@
     .hint {
         color: $nav_bg;
         font-weight: 500;
+    }
+}
+
+.otp {
+    .inputs {
+        justify-content: space-between;
+        width: 100%;
+
+        input {
+            width: 60px;
+            height: 60px;
+            outline: none;
+            text-align: center;
+            font-size: 2rem;
+            border-bottom: 3px solid $nav_bg !important;
+        }
+    }
+
+    .verify_btn {
+        background-color: $nav_bg;
+        color: #FFF;
+        width: 100%;
     }
 }
