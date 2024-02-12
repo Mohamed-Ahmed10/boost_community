@@ -1,7 +1,27 @@
 .tracking_content {
     font-size: .8rem;
 
+    .search_container {
+        position: relative;
+        width: 70%;
 
+        input {
+            padding-inline-start: 3rem;
+            box-shadow: none;
+            margin: 20px 0;
+        }
+
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(../images/icons/search.svg) no-repeat;
+            color: $gray_color;
+            position: absolute;
+            top: 34%;
+            left: 3%;
+        }
+    }
 
     .persons {
         padding: 20px;
@@ -26,10 +46,18 @@
 
         .job_container {
             background: #BC50901A;
+
+            img {
+                width: 20px;
+            }
         }
 
         .location_container {
             background: #5788C11A;
+
+            img {
+                width: 20px;
+            }
         }
 
         .total {
@@ -44,27 +72,7 @@
             color: $danger
         }
 
-        .search_container {
-            position: relative;
-            width: 70%;
 
-            input {
-                padding-inline-start: 3rem;
-                box-shadow: none;
-                margin: 20px 0;
-            }
-
-            &::after {
-                content: "";
-                width: 24px;
-                height: 24px;
-                background: url(../images/icons/search.svg) no-repeat;
-                color: $gray_color;
-                position: absolute;
-                top: 34%;
-                left: 3%;
-            }
-        }
 
         .list-group {
             max-height: 60vh;
@@ -76,7 +84,7 @@
                         linear-gradient(0deg, #E6F7FF, #E6F7FF);
                 }
 
-                img {
+                .emp_image {
                     width: 30px;
                 }
 
@@ -92,9 +100,55 @@
         background-color: #FFF;
         box-shadow: 0px 10px 20px 0px #00000036;
 
-        .employee {
-            img {
-                width: 70px;
+        .data_head {
+            gap: 10px;
+
+            .employee {
+                img {
+                    width: 70px;
+                }
+            }
+
+            .task_card {
+                gap: 5px;
+                width: 21%;
+                box-shadow: 0px 10px 20px 0px #00000036;
+                padding: 16px 6px;
+
+                h5 {
+                    margin: 0;
+                }
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+
+        .search_container {
+
+            &::after {
+                top: 6px;
+            }
+
+            input {
+                margin: 0;
+
+            }
+        }
+
+        .tasks_data {
+            table {
+                box-shadow: 0px 10px 20px 0px #0000001A;
+
+                th {
+                    color: #838383;
+                    font-weight: normal;
+                }
+
+                td {
+                    color: #363636
+                }
             }
         }
     }

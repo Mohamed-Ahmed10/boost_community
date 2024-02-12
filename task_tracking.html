@@ -130,7 +130,7 @@
                             <li class="list-group-item selected">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -155,7 +155,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -180,7 +180,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -205,7 +205,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -230,7 +230,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -255,7 +255,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <img src="./images/employee3.png" alt="employee">
+                                        <img src="./images/employee3.png" class="emp_image" alt="employee">
                                         <span class="fw-bold">Mohammed Sami</span>
                                     </div>
                                     <div class="btn-group me-2" role="group" aria-label="First group">
@@ -282,10 +282,110 @@
                 </div>
                 <div class="col-8">
                     <div class="data">
-                        <div class="data_head">
-                            <div class="employee">
-                                <img src="./images/employee3.png" alt="employee">
+                        <div class="data_head d-flex align-items-center">
+                            <div class="employee d-inline-flex align-items-center me-2 flex-grow-1">
+                                <img src="./images/employee3.png" class="emp_image" alt="employee">
+                                <h6 class="fw-bold ms-1">Mohammed Sami</h6>
                             </div>
+                            <div class="task_card justify-content-around d-inline-flex align-items-center">
+                                <span>Total tasks</span>
+                                <h5>30</h5>
+                                <img src="./images/icons/total.svg" alt="icon">
+                            </div>
+                            <div class="task_card justify-content-around d-inline-flex align-items-center">
+                                <span>In progress</span>
+                                <h5>30</h5>
+                                <img src="./images/icons/in_progress.svg" alt="icon">
+                            </div>
+                            <div class="task_card justify-content-around d-inline-flex align-items-center">
+                                <span>Overdue</span>
+                                <h5>30</h5>
+                                <img src="./images/icons/overdue.svg" alt="icon">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+                            <div class="search_container">
+                                <input type="text" class="form-control" placeholder="Search...">
+                            </div>
+                            <div>
+                                <button type="button" class="btn ">
+                                    <img src="./images/icons/table/sort.svg" class="icon" alt="icon">
+                                </button>
+                                <button type="button" class="btn ">
+                                    <img src="./images/icons/table/filter.svg" class="icon" alt="icon">
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="tasks_data">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Task name</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Deadline</th>
+                                        <th scope="col">Project</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Assigned by</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Bench marking and Briefing </th>
+                                        <td>Ongoing</td>
+                                        <td>16-10-2023</td>
+                                        <td>Marketing Campaign</td>
+                                        <td>Mohammed Yasser</td>
+                                        <td>Ramadan Mohamed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Task name</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Deadline</th>
+                                        <th scope="col">Project</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Assigned by</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Bench marking and Briefing </th>
+                                        <td>Ongoing</td>
+                                        <td>16-10-2023</td>
+                                        <td>Marketing Campaign</td>
+                                        <td>Mohammed Yasser</td>
+                                        <td>Ramadan Mohamed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Task name</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Deadline</th>
+                                        <th scope="col">Project</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Assigned by</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Bench marking and Briefing </th>
+                                        <td>Ongoing</td>
+                                        <td>16-10-2023</td>
+                                        <td>Marketing Campaign</td>
+                                        <td>Mohammed Yasser</td>
+                                        <td>Ramadan Mohamed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
