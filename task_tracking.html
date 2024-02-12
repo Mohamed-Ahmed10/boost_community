@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar site_nav">
+        <div class="container">
+            <div class="d-flex left align-items-center">
+                <div id="toggler" class="d-flex align-items-center">
+                    <img src="./images/icons/nav_btn.svg" class="toggle_icon" alt="nav btn">
+                    <img src="./images/icons/close_btn.svg" class="toggle_icon hidden_icon" alt="plus icon">
+                </div>
+                <button type="button" class="btn btn-info text-white">
+                    <img src="./images/icons/plus.svg" class="icon" alt="plus icon">
+                    <span>Create</span>
+                </button>
+            </div>
+            <div class="search_container">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="btn ai_btn">
+                    <img src="./images/icons/fox.svg" class="icon" alt="Ai icon">
+                    <span>AI Wizard</span>
+                </div>
+                <div class="dropdown d-flex">
+                    <button class="border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/person.png" class="rounded-circle" alt="user">
+                        <img src="./images/icons/arrow_down_light.svg" class="icon" alt="icon">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row m-0">
+        <div id="side_nav" class="col-2 p-0 sidebar_container hide">
+            <div class="sidebar position-relative">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img class="icon" src="./images/icons/sidebar/home.svg" alt="icon">
+                            <span>home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/my_tasks.svg" alt="icon">
+                            <span>my tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="./images/icons/sidebar/inbox.svg" alt="icon">
+                            <span>inbox</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="border border-secondary border-1 opacity-50">
+                <ul>
+                    <li class="title">
+                        <div>organization</div>
+                    </li>
+                    <li>
+                        <a href="reporting.html">
+                            <img class="icon" src="./images/icons/sidebar/reporting.svg" alt="icon">
+                            <span>reporting</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="./trainers.html">
+                            <img class="icon" src="./images/icons/sidebar/trainers.svg" alt="icon">
+                            <span>trainers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses.html">
+                            <img class="icon" src="./images/icons/sidebar/courses.svg" alt="icon">
+                            <span>courses</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="employees.html">
+                            <img class="icon" src="./images/icons/sidebar/employees.svg" alt="icon">
+                            <span>Employees</span>
+                        </a>
+                    </li>
+                </ul>
+                <img src="./images/boost_logo.png" class="logo" alt="logo">
+            </div>
+        </div>
+        <div class="col-9 tracking_content mt-4 offset_left" id="side_content">
+            <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Employees</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tracking mode</li>
+                </ol>
+            </div>
+            <div class="row">
+                <div class="col-4 persons">
+                    <ul class="list-group">
+                        <li>
+                            <div class="search_container">
+                                <input type="text" class="form-control" placeholder="Search...">
+                            </div>
+                        </li>
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <div class="col-8">test</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

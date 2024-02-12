@@ -1,5 +1,7 @@
-.courses_content {
-    .courses_container {
+.courses_content,
+.trainers_content {
+    .courses_container,
+    .trainers_container {
         border: 1px solid $gray_color;
         box-shadow: 2px 2px solid #ccc;
         border-radius: 5px;

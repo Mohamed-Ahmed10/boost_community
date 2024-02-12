@@ -1,0 +1,27 @@
+.tracking_content {
+    .persons {
+        padding: 20px;
+        background-color: #FFF;
+        box-shadow: 10px 10px 10px #EEE;
+
+        .search_container {
+            position: relative;
+
+            input {
+                padding-inline-start: 2rem;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                background: url(../images/icons/search.svg) no-repeat;
+                color: $gray_color;
+                position: absolute;
+                top: 17%;
+                left: 3%;
+            }
+        }
+    }
+}

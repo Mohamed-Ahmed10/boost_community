@@ -1,0 +1,39 @@
+.employees_content {
+    .right {
+        gap: 5px;
+
+        button {
+            border: 2px solid #71808880
+        }
+
+        .listing {
+            background-color: $gray_color;
+            padding: 4px;
+            border-radius: .375rem;
+
+            > :first-child {
+                background-color: $nav_bg
+            }
+
+            >.btn {
+                border: none;
+                padding: 6px;
+            }
+        }
+
+        >.d-flex {
+            gap: 5px;
+        }
+    }
+
+    .employee_image {
+        position: relative;
+
+        &::after {
+            content: 'test';
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
