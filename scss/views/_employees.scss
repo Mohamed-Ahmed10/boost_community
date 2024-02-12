@@ -29,6 +29,10 @@
     .employee_image {
         position: relative;
 
+        @media (max-width:1000px) {
+            width: 30px;
+        }
+
         &::after {
             content: 'test';
             position: absolute;
