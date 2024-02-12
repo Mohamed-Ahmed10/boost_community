@@ -33,11 +33,11 @@ body {
     width: 19px;
 
     @media (max-width:1000px) {
-        width: 10px;
+        width: 13px;
     }
 
     @media (max-width:500px) {
-        width: 7px;
+        width: 9px;
     }
 }
 
@@ -164,4 +164,8 @@ li {
     &~* {
         font-size: .7rem;
     }
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #00314B;
 }
