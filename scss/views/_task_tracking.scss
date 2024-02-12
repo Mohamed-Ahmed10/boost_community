@@ -1,15 +1,57 @@
 .tracking_content {
+    font-size: .8rem;
+
+
+
     .persons {
         padding: 20px;
         background-color: #FFF;
-        box-shadow: 10px 10px 10px #EEE;
+        box-shadow: 0px 10px 20px 0px #00000036;
+
+        .breadcrumb,
+        & a {
+            color: #363636;
+            font-weight: 400;
+        }
+
+        .job_container,
+        .location_container {
+            gap: 5px;
+            padding: 7px;
+
+            img {
+                width: 18px;
+            }
+        }
+
+        .job_container {
+            background: #BC50901A;
+        }
+
+        .location_container {
+            background: #5788C11A;
+        }
+
+        .total {
+            color: $nav_bg
+        }
+
+        .in_progress {
+            color: $in_progress
+        }
+
+        .overdue {
+            color: $danger
+        }
 
         .search_container {
             position: relative;
+            width: 70%;
 
             input {
-                padding-inline-start: 2rem;
+                padding-inline-start: 3rem;
                 box-shadow: none;
+                margin: 20px 0;
             }
 
             &::after {
@@ -19,8 +61,40 @@
                 background: url(../images/icons/search.svg) no-repeat;
                 color: $gray_color;
                 position: absolute;
-                top: 17%;
+                top: 34%;
                 left: 3%;
+            }
+        }
+
+        .list-group {
+            max-height: 60vh;
+            overflow: auto;
+
+            .list-group-item {
+                &.selected {
+                    background: linear-gradient(0deg, #E6EEF2, #E6EEF2),
+                        linear-gradient(0deg, #E6F7FF, #E6F7FF);
+                }
+
+                img {
+                    width: 30px;
+                }
+
+                .btn {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+
+    .data {
+        padding: 20px;
+        background-color: #FFF;
+        box-shadow: 0px 10px 20px 0px #00000036;
+
+        .employee {
+            img {
+                width: 70px;
             }
         }
     }
