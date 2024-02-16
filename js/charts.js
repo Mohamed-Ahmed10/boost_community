@@ -71,7 +71,6 @@ $(".progress_bar").each(function () {
 }
 /****************************** Sales Chart ********************************/
 
-
 var ctx = document.getElementById("myChart").getContext('2d');
 
 var myChart = new Chart(ctx, {
@@ -82,23 +81,23 @@ var myChart = new Chart(ctx, {
             label: 'Series 1', // Name the series
             data: [5, 87, 120, 66], // Specify the data values array
             fill: true,
-            borderColor: '#2196f3', // Add custom color border (Line)
-            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderColor: '#58508D', // Add custom color border (Line)
+            backgroundColor: '#58508D', // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         },
         {
             label: 'Series 2', // Name the series
             data: [12, 54, 35, 77], // Specify the data values array
             fill: true,
-            borderColor: '#4CAF50', // Add custom color border (Line)
-            backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+            borderColor: '#FFA600', // Add custom color border (Line)
+            backgroundColor: '#FFA600', // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }, {
             label: 'Series 2', // Name the series
             data: [55, 84, 34, 14], // Specify the data values array
             fill: true,
-            borderColor: '#888', // Add custom color border (Line)
-            backgroundColor: '#888', // Add custom color background (Points and Fill)
+            borderColor: '#FF6361', // Add custom color border (Line)
+            backgroundColor: '#FF6361', // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         }]
     },
@@ -106,4 +105,35 @@ var myChart = new Chart(ctx, {
         responsive: true, // Instruct chart js to respond nicely.
         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
     }
+});
+/**************************************** Department performance ************************************************/
+// Sample data for the chart
+const departmentData = {
+    labels: ['January', 'February', 'March', 'April', 'May'],
+    datasets: [
+        {
+            label: ['Completed','Not completed' , 'In progress'],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            data: [120, 150, 180, 90, 200]
+        }
+    ]
+};
+
+// Configuration options for the chart
+const departmentOptions = {
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    }
+};
+
+// Create the chart
+const ctx2 = document.getElementById('departmentPerformance').getContext('2d');
+new Chart(ctx2, {
+    type: 'bar',
+    data: departmentData,
+    options: departmentOptions
 });

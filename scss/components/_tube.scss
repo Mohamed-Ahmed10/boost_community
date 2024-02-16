@@ -1,7 +1,7 @@
 :root {
     --tube-percentage: 50%;
     --tube-title: "50%";
-    --tube-color: #9198e5;
+    --tube-color: #58508D;
 }
 
 .tube {
@@ -229,7 +229,7 @@
     bottom: var(--tube-percentage);
     transform: translateY(50%);
     background: var(--tube-color);
-    color: #1D1D19;
+    color: #FFF;
     padding: 6px;
     font-size: 12px;
     font-weight: bold;

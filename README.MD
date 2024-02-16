@@ -2,7 +2,9 @@
 1- All classes in snake_case convention so any other class with kebab-case is belongs to Bootstrap library <br /><br />
 2- CSS Styles is compressed in css/style.min.css.<br /><br />
 3- Libraries are used are <br /><br />
-[ [a Bootstrap](https://getbootstrap.com)
+[ [a Bootstrap](https://getbootstrap.com),
+[jQuery](http://jquery.com), and
+[Chart.js] (https://www.chartjs.org/docs/latest)
 ].<br /><br />
 4- You can see source code with [SASS](https://sass-lang.com) in scss file and compiled to css in css folder.<br /><br />
 5- I used SCSS extension NOT SASS in SASS language because it's more powerful than SASS.<br /><br />
