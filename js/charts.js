@@ -112,7 +112,7 @@ const departmentData = {
     labels: ['January', 'February', 'March', 'April', 'May'],
     datasets: [
         {
-            label: ['Completed','Not completed' , 'In progress'],
+            label: ['Completed', 'Not completed', 'In progress'],
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
@@ -137,3 +137,102 @@ new Chart(ctx2, {
     data: departmentData,
     options: departmentOptions
 });
+
+/**************************************** highest_reporting_chart ************************/
+const highData = [
+    { id: 1, region: 'USA', value: 12, image: "../images/employee.jpg" },
+    { id: 2, region: 'China', value: 16, image: "../images/employee2.png" },
+    { id: 3, region: 'Germany', value: 10, image: "../images/employee3.png" }
+];
+
+const margins = { horizontal: 20, vertical: 20 };
+const chartWidth = 400 - (margins.horizontal * 2);
+const chartHeight = 320 - (margins.vertical * 2);
+
+const chartContainer = d3
+    .select('#high_report')
+    .attr('width', chartWidth + (margins.horizontal))
+    .attr('height', chartHeight + (margins.vertical));
+
+const chart = chartContainer.append('g');
+
+function renderChart(chartData) {
+    const x = d3
+        .scaleBand()
+        .rangeRound([margins.horizontal * 2, chartWidth])
+        .padding(0.1)
+        .domain(chartData.map(d => d.region));
+    const y = d3
+        .scaleLinear()
+        .range([chartHeight, 0])
+        .domain([0, d3.max(chartData, d => d.value) + 3]);
+
+    chart.selectAll('g').remove();
+
+    chart
+        .append('g')
+        .call(d3.axisLeft(y).tickSizeOuter(0))
+        .attr('transform', `translate(${margins.horizontal}, -${margins.vertical})`)
+        .attr('color', '#4f009e');
+
+    chart.selectAll('.bar').remove();
+
+    chart
+        .selectAll('.bar')
+        .data(chartData, d => d.id)
+        .enter()
+        .append('rect')
+        .classed('bar', true)
+        .attr('width', 20)
+        .attr('height', d => chartHeight - y(d.value))
+        .attr('x', d => x(d.region) + 10)
+        .attr('ry', 5)
+        .attr('y', d => y(d.value) - 10);
+
+    chart.selectAll('.label').remove();
+
+    chart
+        .selectAll('.label')
+        .data(chartData, d => d.id)
+        .enter()
+        .append('image')
+        .attr('xlink:href', d => d.image)
+        .attr('width', 20)
+        .attr('height', 20)
+        .attr('x', d => x(d.region) + 10)
+        .attr('y', 275)
+    // .attr('text-anchor', 'middle')
+    // .classed('label', true);
+}
+
+let unselectedIds = [];
+
+const listItems = d3
+    .select('#data')
+    .select('ul')
+    .selectAll('li')
+    .data(highData)
+    .enter()
+    .append('li');
+
+listItems
+    .append('span')
+    .text(d => d.region);
+
+listItems
+    .append('input')
+    .attr('type', 'checkbox')
+    .attr('checked', true)
+    .on('change', (data) => {
+        if (unselectedIds.indexOf(data.id) === -1) {
+            unselectedIds.push(data.id);
+        } else {
+            unselectedIds = unselectedIds.filter(id => id !== data.id);
+        }
+
+        const newData = highData.filter(d => !unselectedIds.includes(d.id));
+
+        renderChart(newData);
+    });
+
+renderChart(highData);
