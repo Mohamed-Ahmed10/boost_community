@@ -156,7 +156,7 @@ const chartContainer = d3
 
 const chart = chartContainer.append('g');
 
-function renderChart(chartData) {
+function renderHighChart(chartData) {
     const x = d3
         .scaleBand()
         .rangeRound([margins.horizontal * 2, chartWidth])
@@ -186,7 +186,7 @@ function renderChart(chartData) {
         .attr('width', 20)
         .attr('height', d => chartHeight - y(d.value))
         .attr('x', d => x(d.region) + 10)
-        .attr('ry', 5)
+        .attr('rx', 5)
         .attr('y', d => y(d.value) - 10);
 
     chart.selectAll('.label').remove();
@@ -205,9 +205,9 @@ function renderChart(chartData) {
     // .classed('label', true);
 }
 
-let unselectedIds = [];
+let highUnselectedIds = [];
 
-const listItems = d3
+const highListItems = d3
     .select('#data')
     .select('ul')
     .selectAll('li')
@@ -215,11 +215,111 @@ const listItems = d3
     .enter()
     .append('li');
 
-listItems
+highListItems
     .append('span')
     .text(d => d.region);
 
-listItems
+highListItems
+    .append('input')
+    .attr('type', 'checkbox')
+    .attr('checked', true)
+    .on('change', (data) => {
+        if (highUnselectedIds.indexOf(data.id) === -1) {
+            highUnselectedIds.push(data.id);
+        } else {
+            highUnselectedIds = highUnselectedIds.filter(id => id !== data.id);
+        }
+
+        const newData = highData.filter(d => !highUnselectedIds.includes(d.id));
+
+        renderHighChart(newData);
+    });
+
+renderHighChart(highData);
+
+
+/**************************************** highest_reporting_chart ************************/
+const lowData = [
+    { id: 1, region: 'USA', value: 12, image: "../images/employee.jpg" },
+    { id: 2, region: 'China', value: 16, image: "../images/employee2.png" },
+    { id: 3, region: 'Germany', value: 10, image: "../images/employee3.png" }
+];
+
+const lowMargins = { horizontal: 20, vertical: 20 };
+const lowChartWidth = 400 - (lowMargins.horizontal * 2);
+const lowChartHeight = 320 - (lowMargins.vertical * 2);
+
+const lowChartContainer = d3
+    .select('#low_report')
+    .attr('width', lowChartWidth + (lowMargins.horizontal))
+    .attr('height', lowChartHeight + (lowMargins.vertical));
+
+const lowChart = lowChartContainer.append('g');
+
+function renderLowChart(chartData) {
+    const x = d3
+        .scaleBand()
+        .rangeRound([lowMargins.horizontal * 2, lowChartWidth])
+        .padding(0.1)
+        .domain(chartData.map(d => d.region));
+    const y = d3
+        .scaleLinear()
+        .range([lowChartHeight, 0])
+        .domain([0, d3.max(chartData, d => d.value) + 3]);
+
+    lowChart.selectAll('g').remove();
+
+    lowChart
+        .append('g')
+        .call(d3.axisLeft(y).tickSizeOuter(0))
+        .attr('transform', `translate(${lowMargins.horizontal}, -${lowMargins.vertical})`)
+        .attr('color', '#FFA600');
+
+    lowChart.selectAll('.bar').remove();
+
+    lowChart
+        .selectAll('.bar')
+        .data(chartData, d => d.id)
+        .enter()
+        .append('rect')
+        .classed('bar', true)
+        .attr('width', 20)
+        .attr('height', d => lowChartHeight - y(d.value))
+        .attr('x', d => x(d.region) + 10)
+        .attr('ry', 5)
+        .attr('y', d => y(d.value) - 10);
+
+    lowChart.selectAll('.label').remove();
+
+    lowChart
+        .selectAll('.label')
+        .data(chartData, d => d.id)
+        .enter()
+        .append('image')
+        .attr('xlink:href', d => d.image)
+        .attr('width', 20)
+        .attr('height', 20)
+        .attr('x', d => x(d.region) + 10)
+        .attr('y', 275)
+    // .attr('text-anchor', 'middle')
+    // .classed('label', true);
+}
+
+let unselectedIds = [];
+
+const lowListItems = d3
+    .select('#data')
+    .select('ul')
+    .selectAll('li')
+    .data(lowData)
+    .enter()
+    .append('li');
+
+lowListItems
+    .append('span')
+    .text(d => d.region);
+
+lowListItems
     .append('input')
     .attr('type', 'checkbox')
     .attr('checked', true)
@@ -230,9 +330,9 @@ listItems
             unselectedIds = unselectedIds.filter(id => id !== data.id);
         }
 
-        const newData = highData.filter(d => !unselectedIds.includes(d.id));
+        const newData = lowData.filter(d => !unselectedIds.includes(d.id));
 
-        renderChart(newData);
+        renderLowChart(newData);
     });
 
-renderChart(highData);
+renderLowChart(lowData);

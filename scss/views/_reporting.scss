@@ -98,14 +98,26 @@
             align-items: center;
             font-weight: bold;
         }
+    }
+}
 
-        .bar {
-            fill: #4f009e;
-        }
+.highest_reporting_chart {
+    .bar {
+        fill: #4f009e;
+    }
 
-        .label {
-            fill: #4f009e;
-        }
+    .label {
+        fill: #4f009e;
+    }
+}
+
+.lowest_reporting_chart {
+    .bar {
+        fill: #FFA600;
+    }
+
+    .label {
+        fill: #FFA600;
     }
 }
 
@@ -113,6 +125,4 @@
     from {
         width: 0
     }
-
-
 }
